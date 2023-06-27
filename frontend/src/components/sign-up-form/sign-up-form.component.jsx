@@ -43,6 +43,9 @@ const SignUpForm = () => {
      })
  };
 
+
+
+
   return (
       <div>
           <h1>Sign Up with youre email and password</h1>
