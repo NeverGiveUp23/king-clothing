@@ -1,4 +1,8 @@
-# king-clothing
+# Welcome to King Clothing!
+
+
+## Technologies I'm Using
+
 <img src="https://github.com/NeverGiveUp23/king-clothing/assets/109393467/c5d5374f-90c7-45ef-885d-a9cb0dfa89f0" alt="image-description" width="150" height="100" />
 
 <img src="https://github.com/NeverGiveUp23/king-clothing/assets/109393467/a4599361-a2f9-4c77-87a2-4b355e4feeec" alt="image-description"  width="150" height="100" />
