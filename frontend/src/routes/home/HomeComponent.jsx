@@ -33,8 +33,9 @@ const Home = () => {
     ]
     return (
         <div>
+
+            <DirectoryItemMenu categories={categories} />
             <Outlet />
-                <DirectoryItemMenu categories={categories} />
         </div>
     );
 }
