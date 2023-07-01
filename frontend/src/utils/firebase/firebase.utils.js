@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app';  // this is the function that initializes the firebase app
-import { getAuth, signInWithRedirect, signInWithPopup,  GoogleAuthProvider } from 'firebase/auth';  // this is the function that initializes the firebase auth
+import { getAuth, signInWithPopup,  GoogleAuthProvider } from 'firebase/auth';  // this is the function that initializes the firebase auth
 import { getFirestore, doc, getDoc, setDoc } from 'firebase/firestore';  // this is the function that initializes the firebase firestore
 
 const firebaseConfig = {
@@ -14,14 +14,23 @@ const firebaseConfig = {
 // Initialize Firebase
 const firebaseApp = initializeApp(firebaseConfig);
 
-const provider = new GoogleAuthProvider();
-provider.setCustomParameters({
+const googleProvider = new GoogleAuthProvider();
+googleProvider.setCustomParameters({
     prompt: "select_account"
 });
 
+// const gitProvider = new GithubAuthProvider();
+// gitProvider.setCustomParameters({
+//     prompt: "select_account"
+// });
+
 export const auth = getAuth();
 
-export const signInWithGooglePopup = () => signInWithPopup(auth, provider);
+export const signInWithGooglePopup = () => signInWithPopup(auth, googleProvider);
+
+// export const signInWithGoogleRedirect = () => signInWithRedirect(auth, googleProvider);
+
+// export const SignInWithGithubPopup = () => signInWithPopup(auth, googleProvider);
 
 
 export const db = getFirestore();
@@ -30,11 +39,9 @@ export const db = getFirestore();
 export const createUserDocumentFromAuth = async (userAuth) => { // userAuth is the object returned from the auth library
     const userDocRef = doc(db, 'users', userAuth.uid); // this is the reference to the user document in the firestore database
 
-    console.log(userDocRef);
 
     const userSnapshot = await getDoc(userDocRef);
-    console.log(userSnapshot);
-    console.log(userSnapshot.exists());
+
 
     // if the user document does not exist in the firestore database, then create it
     if(!userSnapshot.exists()){
