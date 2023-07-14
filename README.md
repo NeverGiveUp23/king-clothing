@@ -13,7 +13,7 @@
 </p>
 
 
-## Technologies I'm Using
+## Technologies Used
 
 <img src="https://github.com/NeverGiveUp23/king-clothing/assets/109393467/c5d5374f-90c7-45ef-885d-a9cb0dfa89f0" alt="image-description" width="150" height="100" />
 
