@@ -1,6 +1,7 @@
 import './cart-dropdown.scss';
 import Button from "../button/button.component";
 
+// Dropdown component for cart
 const CartDropdown = () => {
   return (
       <div className={'cart-dropdown-container'}>
@@ -9,4 +10,6 @@ const CartDropdown = () => {
       </div>
   )
 }
+
+
 export default CartDropdown;
