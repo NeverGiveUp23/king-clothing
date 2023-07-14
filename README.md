@@ -1,5 +1,17 @@
 # Welcome to King Clothing!
 
+<p>
+  <a href="https://github.com/NeverGiveUp23/donation-marketplace-app/graphs/commit-activity">
+    <img src="https://img.shields.io/github/stars/NeverGiveUp23/king-clothing" alt="last update" />
+  </a>
+  <a href="https://github.com/Louis3797/awesome-readme-template/network/members">
+    <img src="https://img.shields.io/github/commit-activity/t/NeverGiveUp23/king-clothing" alt="forks" />
+  </a>
+  <a href="https://github.com/Louis3797/awesome-readme-template/stargazers">
+    <img src="https://img.shields.io/github/issues/NeverGiveUp23/king-clothing" alt="stars" />
+  </a>
+</p>
+
 
 ## Technologies I'm Using
 
