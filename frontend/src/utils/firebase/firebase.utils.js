@@ -1,5 +1,13 @@
 import { initializeApp } from 'firebase/app';  // this is the function that initializes the firebase app
-import { getAuth, signInWithPopup,  GoogleAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from 'firebase/auth';  // this is the function that initializes the firebase auth
+import {
+    getAuth,
+    signInWithPopup,
+    GoogleAuthProvider,
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
+    signOut ,
+    onAuthStateChanged // this will return back a listener
+} from 'firebase/auth';  // this is the function that initializes the firebase auth
 import { getFirestore, doc, getDoc, setDoc } from 'firebase/firestore';  // this is the function that initializes the firebase firestore
 
 const firebaseConfig = {
@@ -21,8 +29,6 @@ googleProvider.setCustomParameters({
 
 export const auth = getAuth();
 export const signInWithGooglePopup = () => signInWithPopup(auth, googleProvider);
-// export const signInWithGoogleRedirect = () =>
-//     signInWithRedirect(auth, googleProvider);
 
 export const db = getFirestore();
 
@@ -63,3 +69,8 @@ export const signInAuthUserWithEmailWithPassword = async (email, password) => {
 }
 
 export const signOutUser = async () => await signOut(auth) // auth keeps track of the user signed in
+
+export const onAuthStateChangeListener = (callback) => {
+
+    onAuthStateChanged(auth, callback);
+}
